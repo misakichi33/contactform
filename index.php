@@ -6,6 +6,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $post = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
 
     // フォームの送信時にエラーチェック
+    if ($post['item'] === '') {
+        $error['item'] = 'blank';
+    }
     if ($post['name'] === '') {
         $error['name'] = 'blank';
     }
@@ -14,10 +17,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } else if (!filter_var($post['email'], FILTER_VALIDATE_EMAIL)) {
         $error['email'] = 'email';
     }
+    if ($post['tel'] === '') {
+        $error['tel'] = 'blank';
+    } else if (!filter_var($post['tel'], FILTER_VALIDATE_INT) === false) {
+        $error['tel'] = 'tel';
+    }
     if ($post['contact'] === '') {
         $error['contact'] = 'blank';
     }
-
     if (count($error) === 0) {
         // エラーがない時は確認画面に移動
         $_SESSION['form'] = $post;
@@ -30,7 +37,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
     
 }
-//var_dump( $post );
 
 ?>
 <!DOCTYPE html>
@@ -50,20 +56,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <div class="form-group">
                 <div class="row">
                     <div class="col-2">
-                        <label for="item">件名</label>
+                        <label for="inputItem">件名</label>
                     </div>
                     <div class="col-2">
                         <p class="require_item">必須</p>
                     </div>
                     <div class="col-md-8">
-                        <input type="text" name="item" id="item" class="form-control" value="<?php echo htmlspecialchars($post['item']); ?>" required autofocus>
+                        <select name="item" id="inputItem" class="form-control" value="<?php echo htmlspecialchars($post['item']); ?>" required autofocus>
+                            <option value="">件名を選択してください</option>
+                            <option value="ご意見">ご意見</option>
+                            <option value="ご感想">ご感想</option>
+                            <option value="その他">その他</option>
+				        </select>
                         <?php if ($error['item'] === 'blank'): ?>
-                            <p class="error_msg">※件名をご記入下さい</p>
+                            <p class="error_msg">※件名を選択下さい</p>
                         <?php endif; ?>
                     </div>
                 </div>
             </div>
-
 
             <div class="form-group">
                 <div class="row">
@@ -97,6 +107,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <?php endif; ?>
                         <?php if ($error['email'] === 'email'): ?>
                             <p class="error_msg">※メールアドレスを正しくご記入ください</p>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-2">
+                        <label for="inputTel">電話番号</label>
+                    </div>
+                    <div class="col-2">
+                        <p class="require_item">必須</p>
+                    </div>
+                    <div class="col-8">
+                        <input type="tel" name="tel" id="inputTel" class="form-control" value="<?php echo htmlspecialchars($post['tel']); ?>" required>
+                        <?php if ($error['tel'] === 'blank'): ?>
+                            <p class="error_msg">※電話番号をご記入下さい</p>
                         <?php endif; ?>
                     </div>
                 </div>
