@@ -2,7 +2,7 @@
 
 2種類のお問合せフォームを制作
 
-skillcheck-1 →　phpのみで作成 (http://skillcheck-1.contactform.com.lkjhgfdsa.conohawing.com)  
+skillcheck-1 →　php・cssで作成 (http://skillcheck-1.contactform.com.lkjhgfdsa.conohawing.com)  
 skillcheck-2 →　php・css・JavaScriptを用いて作成 (http://skillcheck-2.contactform.com.lkjhgfdsa.conohawing.com)  
  
 # 開発環境
