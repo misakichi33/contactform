@@ -48,8 +48,8 @@ VirtualBox Linux(Ubuntu)
 macOSにてXAMPPを立ち上げ、ローカルホストで画面を確認しながらプログラムファイルを作成。  
 メール送信やデータベース登録の動作テストは、レンタルサーバーにファイルを格納し動作確認のURLを発行し確認。  
 
-動作確認できます
-↓↓↓
+動作確認できます  
+↓↓↓  
 skillcheck-1 →　http://skillcheck-1.contactform.com.lkjhgfdsa.conohawing.com  
 
 skillcheck-2 →　http://skillcheck-2.contactform.com.lkjhgfdsa.conohawing.com
