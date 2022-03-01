@@ -1,7 +1,7 @@
 # 技術力調査（contactform/skillcheck-1 & skillcheck-2）
  
 skillcheck-1 →　phpのみで作成 (http://skillcheck-1.contactform.com.lkjhgfdsa.conohawing.com)  
-skillcheck-２ →　php・css・JavaScriptを用いて作成 (http://skillcheck-2.contactform.com.lkjhgfdsa.conohawing.com)  
+skillcheck-2 →　php・css・JavaScriptを用いて作成 (http://skillcheck-2.contactform.com.lkjhgfdsa.conohawing.com)  
  
 # 開発環境
  
@@ -43,9 +43,11 @@ VirtualBox Linux(Ubuntu)
  
 # どのような動作テストを行ったか
  
-macOSにてXAMPPを立ち上げ、ローカルホストで画面を確認しながらファイルを作成。  
+macOSにてXAMPPを立ち上げ、ローカルホストで画面を確認しながらプログラムファイルを作成。  
 メール送信やデータベース登録の動作テストは、レンタルサーバーにファイルを格納し動作確認のURLを発行し確認。  
 
+動作確認できます
+↓↓↓
 skillcheck-1 →　http://skillcheck-1.contactform.com.lkjhgfdsa.conohawing.com  
 
 skillcheck-2 →　http://skillcheck-2.contactform.com.lkjhgfdsa.conohawing.com
