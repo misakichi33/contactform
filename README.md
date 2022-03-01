@@ -1,7 +1,7 @@
 # 技術力調査（contactform/skillcheck-1 & skillcheck-2）
  
-skillcheck-1 →　phpのみで作成  
-skillcheck-２ →　php・css・JavaScriptを用いて作成
+skillcheck-1 →　phpのみで作成 (http://skillcheck-1.contactform.com.lkjhgfdsa.conohawing.com)  
+skillcheck-２ →　php・css・JavaScriptを用いて作成 (http://skillcheck-2.contactform.com.lkjhgfdsa.conohawing.com)  
  
 # 開発環境
  
