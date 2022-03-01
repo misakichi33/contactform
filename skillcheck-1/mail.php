@@ -1,4 +1,5 @@
 <?php
+    // 管理者へメールを送信
     $to ='misakichi_610@misakichisub.pannosuke.com';
     $from = $email;//ユーザーのアドレス
     $subject = 'お問い合わせが届きました';
