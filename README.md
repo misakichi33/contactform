@@ -1,5 +1,7 @@
 # 技術力調査（contactform/skillcheck-1 & skillcheck-2）
- 
+
+2種類のお問合せフォームを制作
+
 skillcheck-1 →　phpのみで作成 (http://skillcheck-1.contactform.com.lkjhgfdsa.conohawing.com)  
 skillcheck-2 →　php・css・JavaScriptを用いて作成 (http://skillcheck-2.contactform.com.lkjhgfdsa.conohawing.com)  
  
